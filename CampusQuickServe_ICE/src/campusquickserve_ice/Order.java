@@ -44,4 +44,26 @@ public class Order {
         return pricePerItem;
     }
 
+    // Calculation Methods
+
+    public double calculateSubtotal() {
+        return quantity * pricePerItem;
+    }
+
+    public double calculateDiscount() {
+        if (quantity > 3) {
+            return calculateSubtotal() * 0.10;
+        }
+        return 0;
+    }
+
+    public double calculateVAT() {
+        double afterDiscount = calculateSubtotal() - calculateDiscount();
+        return afterDiscount * VAT_RATE;
+    }
+
+    public double calculateFinalTotal() {
+        return (calculateSubtotal() - calculateDiscount()) + calculateVAT();
+    }
 }
+
