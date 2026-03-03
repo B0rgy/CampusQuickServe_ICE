@@ -1,13 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package campusquickserve_ice;
 
-/**
- *
- * @author Adam
- */
 public class Order {
-    
+
+    // Constant
+    public static final double VAT_RATE = 0.15;
+
+    // Private attributes
+    private final String customerName;
+    private final String studentNumber;
+    private final String itemName;
+    private final int quantity;
+    private final double pricePerItem;
+
+    // Constructor
+    public Order(String customerName, String studentNumber, String itemName,
+                 int quantity, double pricePerItem) {
+
+        this.customerName = customerName;
+        this.studentNumber = studentNumber;
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.pricePerItem = pricePerItem;
+    }
+
+    // Getters
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getStudentNumber() {
+        return studentNumber;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double getPricePerItem() {
+        return pricePerItem;
+    }
+
 }
