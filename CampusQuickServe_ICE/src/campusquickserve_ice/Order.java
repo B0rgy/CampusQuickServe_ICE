@@ -57,6 +57,7 @@ public class Order {
         return 0;
     }
 
+    //Discount
     public double calculateVAT() {
         double afterDiscount = calculateSubtotal() - calculateDiscount();
         return afterDiscount * VAT_RATE;
